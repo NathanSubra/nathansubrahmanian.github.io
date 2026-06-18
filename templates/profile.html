@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site.name }} | Profile{% endblock %}
+
+{% block content %}
+  <section class="profile-hero reveal">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.location }}</p>
+      <h1>{{ site.name }}</h1>
+      <p class="lead">{{ site.tagline }}</p>
+      <p class="role-line">{{ site.profile.looking_for }}</p>
+
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button primary" href="{{ url_for('contact') }}">Contact Me</a>
+        <a class="button secondary" href="{{ resume_url }}" target="_blank" rel="noreferrer">View Resume</a>
+      </div>
+    </div>
+
+    <figure class="headshot-frame">
+      <img src="{{ headshot_url }}" alt="Headshot of {{ site.name }}">
+    </figure>
+  </section>
+
+  <section class="content-band reveal">
+    <div class="section-heading">
+      <p class="eyebrow">Profile</p>
+      <h2>Background and Interests</h2>
+    </div>
+
+    <div class="profile-text">
+      {% for paragraph in site.profile.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="highlight-list" aria-label="Research and professional interests">
+      {% for highlight in site.profile.highlights %}
+        <span>{{ highlight }}</span>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

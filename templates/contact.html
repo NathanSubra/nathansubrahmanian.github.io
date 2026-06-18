@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site.name }} | Contact{% endblock %}
+
+{% block content %}
+  <section class="contact-grid reveal">
+    <div class="contact-copy">
+      <p class="eyebrow">Contact</p>
+      <h1>{{ site.contact.heading }}</h1>
+      {% for paragraph in site.contact.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+      <a class="email-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+
+    <aside class="contact-links" aria-label="External profiles">
+      <a href="{{ site.links.github }}" target="_blank" rel="noreferrer">
+        <span>GitHub</span>
+        <strong>Code and projects</strong>
+      </a>
+      <a href="{{ site.links.google_scholar }}" target="_blank" rel="noreferrer">
+        <span>Google Scholar</span>
+        <strong>Research profile</strong>
+      </a>
+    </aside>
+  </section>
+
+  <section class="resume-section reveal">
+    <div class="section-heading">
+      <p class="eyebrow">Resume</p>
+      <h2>Current Resume</h2>
+    </div>
+    <div class="resume-viewer">
+      <object data="{{ resume_url }}" type="application/pdf">
+        <iframe src="{{ resume_url }}" title="{{ site.name }} resume"></iframe>
+        <p>Your browser cannot display this PDF inline. <a href="{{ resume_url }}">Open the resume</a>.</p>
+      </object>
+    </div>
+  </section>
+{% endblock %}

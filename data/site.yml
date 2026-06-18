@@ -1,0 +1,76 @@
+name: "Nathan Subrahmanian"
+tagline: "AI / ML Researcher and engineer studying social problems using AI and implementing production systems."
+location: "Evanston, IL"
+email: "nathansubrahmanian@gmail.com"
+
+links:
+  github: "https://github.com/NathanSubra"
+  google_scholar: "https://scholar.google.com/citations?user=jiFaPKIAAAAJ&hl=en"
+  paper_profile: ""
+
+profile:
+  role_summary: "Machine learning | Academic research | Production ML systems"
+  looking_for: "Research scientist, applied scientist, and ML engineering roles"
+  paragraphs:
+    - "I am a researcher and builder interested in the places where machine learning, scientific reasoning, and human-centered product design meet. I have worked in both academic (Georgia Tech's CLAWS Lab and Northwestern University's NSAIL Lab) and industry (Helios Healthcare Advisors) settings. My work focuses on turning complex technical ideas into systems that are rigorous, usable, and genuinely helpful."
+    - "I am currently looking for roles where I can contribute to ambitious research and applied engineering teams. I am especially excited by opportunities involving AI systems, data-driven product work, and collaborations that connect technical depth with real-world impact."
+  highlights:
+    - "Machine learning"
+    - "Applied research"
+    - "AI for social good"
+    - "Production ML systems"
+
+contact:
+  heading: "Reach Out!"
+  paragraphs:
+    - "The best way to reach me is by email. I am happy to talk about research collaborations, industry roles, and projects where my background may be useful."
+    - "You can also find my code and research activity through the links above."
+
+publications:
+  - title: "Human, AI, and Hybrid Ensembles for Detection of Adaptive, RL-based Social Bots"
+    authors: "V La Gatta, N Subrahmanian, K Wang, L Birnbaum, VS Subrahmanian"
+    venue: "ACM Transactions on the Web '26"
+    year: "2026"
+    paper_url: "https://arxiv.org/pdf/2603.23796"
+    abstract: "The use of reinforcement learning to dynamically adapt and evade detection is now well-documented in
+              several cybersecurity settings including Covert Social Influence Operations (CSIOs), in which bots try to spread
+              disinformation. While AI bot detectors have improved greatly, they are largely limited to detecting static
+              bots that do not adapt dynamically. We present the first systematic study comparing the ability of humans,
+              AI models, and hybrid Human-AI ensembles in detecting adaptive bots powered by reinforcement learning.
+              Using data from a controlled, IRB-approved, five-day experiment with participants interacting on a social
+              media platform infiltrated by RL-trained bots spreading disinformation to influence participants on 4 topics,
+              we examine factors potentially shaping human detection capabilities: demographic characteristics, temporal
+              learning effects, social network position, engagement patterns, and collective intelligence mechanisms. We first
+              test 13 hypotheses comparing human bot detection performance against state-of-the-art AI approaches utilizing
+              both traditional machine learning and large language models. We further investigate several aggregation
+              strategies that combine human reports of bots with AI predictions, as well as retraining protocols that leverage
+              human supervision. Our findings challenge intuitive assumptions about bot detection, reveal unexpected
+              patterns in how humans identify bots, and show that combining human bot reports with AI predictions
+              outperforms humans alone and AI alone. We conclude with a discussion of the practical implications of these
+              results for industry."
+  - title: "Characterizing and Predicting Social Correction on Twitter"
+    authors: "Y Ma, B He, N Subrahmanian, S Kumar"
+    venue: "ACM WebSci '23"
+    year: "2023"
+    paper_url: "https://example.com/another-paper"
+    abstract: "Online misinformation has been a serious threat to public health
+              and society. Social media users are known to reply to misinfor-
+              mation posts with counter-misinformation messages, which have
+              been shown to be effective in curbing the spread of misinforma-
+              tion. This is called social correction. However, the characteristics
+              of tweets that attract social correction versus those that do not
+              remain unknown. To close the gap, we focus on answering the
+              following two research questions: (1) “Given a tweet, will it be
+              countered by other users?”, and (2) “If yes, what will be the magni-
+              tude of countering it?”. This exploration will help develop mech-
+              anisms to guide users’ misinformation correction efforts and to
+              measure disparity across users who get corrected. In this work, we
+              first create a novel dataset with 690,047 pairs of misinformation
+              tweets and counter-misinformation replies. Then, stratified anal-
+              ysis of tweet linguistic and engagement features as well as tweet
+              posters’ user attributes are conducted to illustrate the factors that
+              are significant in determining whether a tweet will get countered.
+              Finally, predictive classifiers are created to predict the likelihood of
+              a misinformation tweet to get countered and the degree to which
+              that tweet will be countered. The code and data is accessible on
+              https://github.com/claws-lab/social-correction-twitter."

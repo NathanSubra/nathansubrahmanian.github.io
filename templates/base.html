@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.tagline }}">
+    <title>{% block title %}{{ site.name }}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body data-page="{{ active_page }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="{{ url_for('profile') }}" aria-label="{{ site.name }} home">
+          <span class="brand-mark">
+            <img src="{{ headshot_url }}" alt="">
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">{{ site.name }}</span>
+            <span class="brand-role">{{ site.profile.role_summary }}</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-links">
+          <a class="{{ active_link_class('profile', active_page) }}" href="{{ url_for('profile') }}">Profile</a>
+          <a class="{{ active_link_class('publications', active_page) }}" href="{{ url_for('publications') }}">Publications</a>
+          <a class="{{ active_link_class('contact', active_page) }}" href="{{ url_for('contact') }}">Contact</a>
+          <a href="{{ site.links.github }}" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="{{ site.links.google_scholar }}" target="_blank" rel="noreferrer">Scholar</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="page-shell">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ current_year }} {{ site.name }}. Built with Flask.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+  </body>
+</html>
